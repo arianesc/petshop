@@ -1,0 +1,2 @@
+class Especie < ApplicationRecord
+end

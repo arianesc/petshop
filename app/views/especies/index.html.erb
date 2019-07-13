@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Especies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cientifico</th>
+      <th>Nome</th>
+      <th>Popular</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @especies.each do |especy| %>
+      <tr>
+        <td><%= especy.nome %></td>
+        <td><%= especy.cientifico %></td>
+        <td><%= especy.nome %></td>
+        <td><%= especy.popular %></td>
+        <td><%= link_to 'Show', especy %></td>
+        <td><%= link_to 'Edit', edit_especy_path(especy) %></td>
+        <td><%= link_to 'Destroy', especy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Especy', new_especy_path %>
