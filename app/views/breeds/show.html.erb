@@ -1,11 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-
-<p>
-  <strong>Name:</strong> <br>
- <h1> <%= @breed.name %> </h1>
-</p>
+<header class="shadow-lg p-3 mb-5 bg-pink rounded">
+  <h1> PET SHOP </>
+</header>
 
 
-<%= link_to 'Edit', edit_breed_path(@breed) %> |
-<%= link_to 'Back', breeds_path %>
+
+<body class = "col-sm">
+  <p>
+    <h1> Name: </h1> <br>
+        <h2> <%= @breed.name %> </h2>
+    <h1> Detail: </h1> <br>
+        <h2> <%= @breed.detail %> </h2>
+  </p>
+</body>
+
+<div class="footer" class = "shadow-lg d-inline-flex p-2 bd-highlight">
+
+<%= link_to 'Edit', edit_breed_path(@breed), class:"btn btn-info" %> |
+<%= link_to 'Back', breeds_path, class:"btn btn-danger" %>
+
+</div>
